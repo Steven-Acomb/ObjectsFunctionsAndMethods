@@ -15,6 +15,9 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
+    circle_and_rectangle()
+    lines()
+
 
 def two_circles():
     """
@@ -81,13 +84,31 @@ def circle_and_rectangle():
     """
     myWindow = rg.RoseWindow()
 
-    center_point3 = rg.Point(200, 100)
-    circle3 = rg.Circle(center_point3, 30)
+    center_point3 = rg.Point(100, 150)
+    circle3 = rg.Circle(center_point3, 50)
     circle3.fill_color = 'blue'
     circle3.attach_to(myWindow)
+    print(1)
+    print('blue')
+    print("Point (100, 150)")
+    print(100)
+    print(150)
 
+    point1 = rg.Point(375, 100)
+    point2 = rg.Point(225, 200)
+    rectangle = rg.Rectangle(point1, point2)
+    rectangle.fill_color = 'orange'
+    rectangle.attach_to(myWindow)
+    print(1)
+    print('orange')
+    print("Point (300, 150)")
+    print(300)
+    print(150)
+
+    myWindow.render()
+    myWindow.close_on_mouse_click()
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -119,8 +140,29 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
+
+    theWindow = rg.RoseWindow()
+    point1a = rg.Point(100, 100)
+    point1b = rg.Point(100, 200)
+    line1 = rg.Line(point1a, point1b)
+    line1.thickness = 10
+    line1.attach_to(theWindow)
+    print("Point(100, 150)")
+    print(100)
+    print(150)
+
+    point2a = rg.Point(200, 100)
+    point2b = rg.Point(200, 200)
+    line2 = rg.Line(point2a, point2b)
+    line2.attach_to(theWindow)
+    print("Point(200, 150)")
+    print(200)
+    print(150)
+
+    theWindow.render()
+    theWindow.close_on_mouse_click()
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
 
 
