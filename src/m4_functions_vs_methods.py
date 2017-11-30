@@ -9,7 +9,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -82,8 +82,9 @@ def main():
     turtle3()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
-
-
+    try_methods()
+    try_functions()
+    try_methods_and_functions()
     window.close_on_mouse_click()
 
 
@@ -171,8 +172,14 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+    kong = rg.SimpleTurtle()
+    kong.pen = rg.Pen('brown',5)
+    kong.forward(150)
+    kong.left(90)
+    kong.forward(50)
+    kong.backward(100)
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
@@ -185,8 +192,11 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -231,8 +241,26 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+
+    bob = rg.SimpleTurtle()
+    bob.pen = rg.Pen('blue', 5)
+    bob.backward(150)
+    bob.speed = 1
+    bob.draw_square(100)
+    bob.left(30)
+    bob.draw_square(100)
+    bob.speed = 5
+    bob.pen = rg.Pen('red', 5)
+    draw_many_squares(bob, 10, 50, 15)
+    bob.speed = 100
+    bob.pen = rg.Pen('red', 35)
+    draw_many_squares(bob, 8, 300, 60)
+    bob.pen = rg.Pen('black', 3)
+    bob.backward(200)
+    bob.draw_circle(30)
+    bob.draw_square(50)
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
